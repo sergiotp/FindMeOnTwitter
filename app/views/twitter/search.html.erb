@@ -1,0 +1,10 @@
+<h1> Listando os Resultados </h1>
+<p> Termo de busca gravado no banco: <%= @search_term.user_name %> </p>
+
+<ul>
+  <% @search_results.each do |result| %>
+  <li> <%= result.name %> </li>
+  <% end %>
+</ul>
+  
+<%= link_to 'fazer nova pesquisa', twitter_path %>
