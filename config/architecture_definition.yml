@@ -1,0 +1,28 @@
+controller:
+  files: 'app/controllers/**/*.rb'
+  allowed: 'model, integracao_twitter, integracao_pdf'
+  
+view:
+  files: 'app/views/**/*.rb'
+  forbidden: 'model'
+  
+model:
+  files: 'app/models/**/*.rb'
+  required: 'activerecord'
+  
+integracao_twitter:
+  files: 'lib/twitter_integration.rb'
+  allowed: 'twitter'
+  
+integracao_pdf:
+  files: 'lib/pdf_integration.rb'
+  allowed: 'pdf'
+  
+twitter:
+  gems: 'Twitter'
+  
+pdf:
+  gems: 'Prawn'
+  
+activerecord:
+  gems: 'ActiveRecord'

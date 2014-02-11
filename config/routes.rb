@@ -3,6 +3,7 @@ SimpleSystem::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
   get 'twitter', :to => 'twitter#index'
   post 'search', :to => 'twitter#search'
+  get 'twitter/pdf', :to => 'twitter#pdf'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
