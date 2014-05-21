@@ -1,5 +1,5 @@
 class TwitterIntegration
-  
+
   def self.client
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = "e3KpbwDyUQpSenaA1AU5w"
@@ -9,11 +9,18 @@ class TwitterIntegration
     end
     client
   end
-  
+
   def search name
     client = self.class.client
     client.user_search(name)
   end
-  
-  
+
+  def break
+    a = PdfIntegration.new
+  end
+
+  def raise_the_access
+    client = Twitter::REST::Client.new
+  end
+
 end

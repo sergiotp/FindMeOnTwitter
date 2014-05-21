@@ -1,0 +1,39 @@
+digraph G {
+overlap = "false";
+splines = "true";
+sep = "+40,40";
+nodesep = "1";
+edge[ color  =  "black" , style  =  "filled" , label  =  ""];
+subgraph internal {
+label = "Internal";
+color = "black";
+rank = "same";
+controller [color = "gray92", style = "filled", shape = "rectangle", label = "controller"];
+view [color = "gray92", style = "filled", shape = "rectangle", label = "view"];
+model [color = "gray92", style = "filled", shape = "rectangle", label = "model"];
+integracao_twitter [color = "gray92", style = "filled", shape = "rectangle", label = "integracao_twitter"];
+integracao_pdf [color = "gray92", style = "filled", shape = "rectangle", label = "integracao_pdf"];
+  controller -> actioncontroller [headlabel = "1", minlen = "2"];
+  controller -> integracao_twitter [headlabel = "1", minlen = "2"];
+  controller -> model [headlabel = "1", minlen = "2"];
+  controller -> integracao_pdf [headlabel = "1", minlen = "2"];
+  controller -> twitter [headlabel = "! (#1)", minlen = "2", color = "orange", style = "bold"];
+  view -> model [headlabel = "! (#1)", minlen = "2", color = "orange", style = "bold"];
+  view -> controller [headlabel = "1", minlen = "2"];
+  model -> activerecord [headlabel = "X (#1)", minlen = "2", color = "red", style = "bold"];
+  integracao_twitter -> twitter [headlabel = "1", minlen = "2"];
+  integracao_twitter -> integracao_pdf [headlabel = "! (#10)", minlen = "2", color = "orange", style = "bold"];
+  integracao_pdf -> pdf [headlabel = "1", minlen = "2"];
+  integracao_twitter -> model [color = "gray74", label = "[none]", minlen = "2"];
+}
+subgraph external {
+label = "External";
+color = "black";
+rank = "same";
+twitter [shape = "parallelogram", color = "gray60", style = "filled", label = "twitter"];
+pdf [shape = "parallelogram", color = "gray60", style = "filled", label = "pdf"];
+activerecord [shape = "parallelogram", color = "gray60", style = "filled", label = "activerecord"];
+actioncontroller [shape = "parallelogram", color = "gray60", style = "filled", label = "actioncontroller"];
+unknown [shape = "parallelogram", color = "gray60", style = "filled", label = "unknown"];
+}
+}

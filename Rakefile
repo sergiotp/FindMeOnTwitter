@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-SimpleSystem::Application.load_tasks
+FindMeOnTwitter::Application.load_tasks

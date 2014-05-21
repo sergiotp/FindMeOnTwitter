@@ -1,0 +1,2 @@
+class TesteClass
+end

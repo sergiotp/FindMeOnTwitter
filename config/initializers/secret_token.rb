@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-SimpleSystem::Application.config.secret_key_base = '409fa1a147b596472531425c67c141312b6336571a15240ca5e690f640d6579d2cffc040a806e916f3c4f078eee01f3fa69a510bdd1aa32a2a76312c57b82727'
+FindMeOnTwitter::Application.config.secret_key_base = '409fa1a147b596472531425c67c141312b6336571a15240ca5e690f640d6579d2cffc040a806e916f3c4f078eee01f3fa69a510bdd1aa32a2a76312c57b82727'
